@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import ToggleButton from "./ToggleButton";

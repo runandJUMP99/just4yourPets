@@ -127,20 +127,36 @@ body {
 
 /* MAIN CONTENT */
 
-#location {
-    background: #ccc;
-    height: 20rem;
+.jumbotron {
+    background: #42dee1;
+    color: white;
 }
 
 #about-us {
-    background: black;
-    height: 20rem;
+    background: white;
+    color: #42dee1;
+    padding: 2rem;
+    text-align: right;
+}
+
+#location {
+    color: white;
+    background: #42dee1;
+    padding: 2rem;
+}
+
+#cta-section {
+    background: white;
+    color: #42dee1;
+    list-style: none;
+    padding: 2rem;
+    text-align: center;
 }
 
 /* FOOTER */
 
 .main-footer {
-    background: #0e4f1f;
+    background: #6decb9;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -229,8 +245,8 @@ body {
 
 
 /* COLORS
-3fc5f0
-42dee1
-6decb9
-eef5b2
+3fc5f0 -- ABOUTUS COLOR
+42dee1 -- LOCATION COLOR
+6decb9 -- FOOTER COLOR
+eef5b2 -- HEADER COLOR
  */

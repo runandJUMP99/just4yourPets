@@ -14,7 +14,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding-top: 2.5rem;
+    padding-top: 4.3rem;
 }
 
 .backdrop {
@@ -105,7 +105,7 @@ body {
 }
 
 .main-nav__item--cta {
-    animation: wiggle 400ms 2s 8 ease-out;
+    animation: wiggle 600ms 2s 2 linear;
 }
 
 .main-nav__item--cta a,
@@ -127,29 +127,76 @@ body {
 
 /* MAIN CONTENT */
 
+/* MAIN INTRO */
+
+.main-intro {
+    position: relative;
+}
+
 .jumbotron {
     background: #42dee1;
     color: white;
+    height: 15rem;
+    margin: 0;
+    padding: 5rem 0.5rem;
+}
+
+.container {
+    position: absolute;
+}
+
+.container h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container p {
+    font-size: 1rem;
+}
+
+/* ABOUT US */
+
+.about-us__container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 #about-us {
-    background: white;
+    background: #ccc;
+    border: 3px solid #eee;
+    border-right: none;
+    box-shadow: 2px 2px 2px black;
     color: #42dee1;
+    height: 12rem;
+    margin: 0 0 5rem 2rem;
     padding: 2rem;
     text-align: right;
+    width: 75%;
 }
+
+/* LOCATION */
 
 #location {
     color: white;
     background: #42dee1;
+    border: 3px solid #eee;
+    border-left: none;
+    box-shadow: 2px 2px 2px black;
+    height: 12rem;
+    margin-bottom: 2rem;
     padding: 2rem;
+    width: 75%;
 }
 
+/* CTA SECTION */
+
 #cta-section {
-    background: white;
-    color: #42dee1;
+    background: #42dee1;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
     list-style: none;
-    padding: 2rem;
+    padding: 5rem;
     text-align: center;
 }
 
@@ -208,38 +255,32 @@ body {
 }
 
 @media (min-width: 41rem) {
+    body {
+        padding-top: 2.9rem;
+    }
+    
     .toggle-button {
         display: none;
     }
 
-     .main-nav {
-        /*display: inline-block;
-        text-align: right;
-        width: calc(100% - 170px);
-        vertical-align: middle;*/
+    .main-nav {
         display: flex;
     }
     
-    .main-footer__link {
-        margin: 0 1rem;
-    }
-
-    .main-footer__links {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    .jumbotron {
+        height: 30rem;
     }
 }
 
 @keyframes wiggle {
     0% {
         transform: rotateZ(0);
-    }
-    50% {
+    } 25% {
         transform: rotateZ(-10deg);
-    }
-    100% {
+    } 75% {
         transform: rotateZ(10deg);
+    } 100% {
+        transform: rotateZ(0deg);
     }
 }
 

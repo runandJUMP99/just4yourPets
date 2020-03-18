@@ -1,10 +1,13 @@
 import React from "react";
+import Carousel from "./Carousel";
 
 function AboutUs() {
     return (
-        <div id="about-us">
-            This is the AboutUs Seciton
-        </div>        
+        <div class="about-us__container">
+            <div id="about-us">
+                <Carousel />
+            </div>    
+        </div>    
     );
 }
 

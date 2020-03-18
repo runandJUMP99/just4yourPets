@@ -1,13 +1,13 @@
 import React from "react";
 import AboutUs from "./AboutUs/AboutUs";
 import CTA from "./CTA/CTA";
-import Jumbotron from "./Jumbotron/Jumbotron";
+import MainIntro from "./MainIntro/MainIntro";
 import Location from "./Location/Location";
 
 function Body() {
     return (
         <div>
-            <Jumbotron />
+            <MainIntro />
             <AboutUs />
             <Location />
             <CTA />

@@ -1,12 +1,22 @@
 import React from "react";
+import Newsletter from "./Newsletter";
+import NavItem from "../Header/NavItem";
 
 function Footer() {
     return(
         <div>
             <footer className="main-footer">
-                <h4>Sign Up to our Newsletter!</h4>
-                <input type="text" placeHolder="Your Email"/><button>Sign up!</button>
-                <p>*Find out about new items, events, and more!*</p>
+                <Newsletter />
+                <ul class="main-footer__items">
+                    <NavItem 
+                    href="#about-us"
+                    item="About Us"
+                    />
+                    <NavItem 
+                    href="#location"
+                    item="Location"
+                    />
+                </ul>
             </footer>
         </div>
     );

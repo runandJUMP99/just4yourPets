@@ -30,6 +30,8 @@ body {
     transition: opacity 0.2s linear;
 }
 
+/* HEADER */
+
 .main-header {
     width: 100%;
     position: fixed;
@@ -104,11 +106,11 @@ body {
     border-bottom: 5px solid white;
 }
 
-.main-nav__item--cta {
+.cta-button {
     animation: wiggle 600ms 2s 2 linear;
 }
 
-.main-nav__item--cta a,
+.cta-button a,
 .mobile-nav__item--cta a {
     color: white;
     background: var(--highlight-color);
@@ -116,8 +118,8 @@ body {
     border-radius: 8px;
 }
 
-.main-nav__item--cta a:hover,
-.main-nav__item--cta a:active,
+.cta-button a:hover,
+.cta-button a:active,
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
     color: var(--highlight-color);
@@ -134,11 +136,8 @@ body {
 }
 
 .jumbotron {
-    background: #42dee1;
-    color: white;
-    height: 15rem;
-    margin: 0;
-    padding: 5rem 0.5rem;
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
+    url("images/sleepygrape.png") center/cover no-repeat border-box, var(--highlight-color);
 }
 
 .container {
@@ -162,12 +161,10 @@ body {
 }
 
 #about-us {
-    background: #ccc;
     border: 3px solid #eee;
     border-right: none;
     box-shadow: 2px 2px 2px black;
     color: #42dee1;
-    height: 12rem;
     margin: 0 0 5rem 2rem;
     padding: 2rem;
     text-align: right;
@@ -182,22 +179,52 @@ body {
     border: 3px solid #eee;
     border-left: none;
     box-shadow: 2px 2px 2px black;
-    height: 12rem;
     margin-bottom: 2rem;
     padding: 2rem;
     width: 75%;
 }
 
+#location p {
+    padding-bottom: 1.5rem;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
 /* CTA SECTION */
 
 #cta-section {
-    background: #42dee1;
+    background: #3fc5f0;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
     list-style: none;
     padding: 5rem;
     text-align: center;
+}
+
+#cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#cta-section p {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+#cta-section a {
+    background: white;
+    color: #42dee1;
+}
+
+#cta-section a:hover,
+#cta-section a:active {
+    background: #6decb9;
+    color: white;
 }
 
 /* FOOTER */
@@ -209,9 +236,41 @@ body {
     text-align: center;
 }
 
+.sign-up__button {
+    color: white;
+    background: var(--highlight-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 0 0.5rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.sign-up__button:hover,
+.sign-up__button:active {
+    color: var(--highlight-color);
+    background: white;
+    border: none;
+}
+
 .main-footer p {
     font-size: 0.8rem;
     padding: 0.5rem;
+}
+
+.main-footer a {
+    font-weight: normal;
+}
+
+.main-footer a:hover,
+.main-footer a:active {
+    border-bottom: none;
+}
+
+.main-footer__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* MOBILE-NAV */
@@ -263,6 +322,11 @@ body {
         display: none;
     }
 
+    .main-footer__items {
+        display: flex;
+        justify-content: center;
+    }
+
     .main-nav {
         display: flex;
     }
@@ -287,7 +351,7 @@ body {
 
 /* COLORS
 3fc5f0 -- ABOUTUS COLOR
-42dee1 -- LOCATION COLOR
+42dee1 -- BACKGROUND COLOR
 6decb9 -- FOOTER COLOR
 eef5b2 -- HEADER COLOR
  */

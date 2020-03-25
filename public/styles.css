@@ -38,7 +38,7 @@ body {
     top: 0;
     left: 0;
     padding: 0.7rem 1rem;
-    background: #eef5b2;
+    background: #6decb9;
     z-index: 60;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -137,10 +137,13 @@ body {
 
 .jumbotron {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
-    url("images/sleepygrape.png") center/cover no-repeat border-box, var(--highlight-color);
+    url("https://www.fleamarketinsiders.com/wp-content/uploads/2018/06/Fleamasters-Flea-Market-e1530191071386.jpg") center/cover no-repeat border-box, var(--highlight-color);
 }
 
 .container {
+    bottom: 10%;
+    color: #eee;
+    left: 5%;
     position: absolute;
 }
 
@@ -161,10 +164,9 @@ body {
 }
 
 #about-us {
-    border: 3px solid #eee;
-    border-right: none;
-    box-shadow: 2px 2px 2px black;
-    color: #42dee1;
+    background: #42dee1;
+    border-radius: 0 0 0 25%/0 0 0 50%;
+    color: white;
     margin: 0 0 5rem 2rem;
     padding: 2rem;
     text-align: right;
@@ -176,9 +178,7 @@ body {
 #location {
     color: white;
     background: #42dee1;
-    border: 3px solid #eee;
-    border-left: none;
-    box-shadow: 2px 2px 2px black;
+    border-radius: 0 25% 0 0/0 20% 0 0;
     margin-bottom: 2rem;
     padding: 2rem;
     width: 75%;
@@ -230,8 +230,8 @@ body {
 /* FOOTER */
 
 .main-footer {
-    background: #6decb9;
-    color: white;
+    background: #eef5b2;
+    color: var(--dark-green);
     padding: 1rem;
     text-align: center;
 }
@@ -265,6 +265,7 @@ body {
 .main-footer a:hover,
 .main-footer a:active {
     border-bottom: none;
+    color: #ccc;
 }
 
 .main-footer__items {

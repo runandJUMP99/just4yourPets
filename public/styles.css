@@ -138,6 +138,8 @@ body {
 .jumbotron {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
     url("https://www.fleamarketinsiders.com/wp-content/uploads/2018/06/Fleamasters-Flea-Market-e1530191071386.jpg") center/cover no-repeat border-box, var(--highlight-color);
+    height: 15rem;
+    margin-bottom: 0;
 }
 
 .container {
@@ -166,6 +168,7 @@ body {
 #about-us {
     background: #42dee1;
     border-radius: 0 0 0 25%/0 0 0 50%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
     color: white;
     margin: 0 0 5rem 2rem;
     padding: 2rem;
@@ -179,9 +182,14 @@ body {
     color: white;
     background: #42dee1;
     border-radius: 0 25% 0 0/0 20% 0 0;
-    margin-bottom: 2rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
     padding: 2rem;
     width: 75%;
+}
+
+#location h2 {
+    font-weight: bold;
+    padding: 2rem 0;
 }
 
 #location p {

@@ -10,3 +10,7 @@
 [0321/114713.183:ERROR:process_info.cc(359)] UncheckedAllocate
 [0321/121323.136:ERROR:process_info.cc(359)] UncheckedAllocate
 [0321/121328.902:ERROR:process_info.cc(359)] UncheckedAllocate
+[0404/155501.642:ERROR:process_info.cc(359)] UncheckedAllocate
+[0404/155501.732:ERROR:process_info.cc(359)] UncheckedAllocate
+[0404/160328.833:ERROR:process_info.cc(359)] UncheckedAllocate
+[0404/160328.858:ERROR:process_info.cc(359)] UncheckedAllocate

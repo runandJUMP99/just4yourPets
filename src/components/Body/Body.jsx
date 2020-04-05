@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import AboutUs from "./AboutUs/AboutUs";
-import CTA from "./CTA/CTA";
 import Footer from "../Footer/Footer";
 import MainIntro from "./MainIntro/MainIntro";
 import Location from "./Location/Location";
@@ -8,12 +7,14 @@ import Location from "./Location/Location";
 function Body() {
 
     const [content, setContent] = useState(<MainIntro />);
-
+    
     function handleClick(content) {
-        if (content === "aboutus" ) {
-            setContent(<AboutUs />);
-        } else {
+        if (content === "aboutus") {
+            setContent(<AboutUs show="true"/>);
+        } else if (content === "location") {
             setContent(<Location />);
+        } else {
+            setContent(<MainIntro />);
         }
     }
 
@@ -21,7 +22,8 @@ function Body() {
         <div>
             {content}
             <Footer 
-            onClick={handleClick}/>
+            onClick={handleClick}
+            />
         </div>
     )
 }

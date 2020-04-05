@@ -8,6 +8,11 @@ function Footer(props) {
             <footer className="main-footer">
                 <ul class="main-footer__items">
                     <NavItem 
+                    href="#home"
+                    item="Home"
+                    onClick={() => props.onClick("home")}
+                    />
+                    <NavItem 
                     href="#about-us"
                     item="About Us"
                     onClick={() => props.onClick("aboutus")}

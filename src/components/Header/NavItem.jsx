@@ -4,7 +4,7 @@ function NavItem(props) {
     return ( 
         <div>
             <li className="main-nav__item">
-                <a href={props.href}>{props.item}</a>
+                <a onClick={props.onClick}>{props.item}</a>
             </li>
         </div>    
     );

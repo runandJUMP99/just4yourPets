@@ -2,19 +2,20 @@ import React from "react";
 import Newsletter from "./Newsletter";
 import NavItem from "../Header/NavItem";
 
-function Footer() {
+function Footer(props) {
     return(
         <div>
             <footer className="main-footer">
-                <Newsletter />
                 <ul class="main-footer__items">
                     <NavItem 
                     href="#about-us"
                     item="About Us"
+                    onClick={() => props.onClick("aboutus")}
                     />
                     <NavItem 
                     href="#location"
                     item="Location"
+                    onClick={() => props.onClick("location")}
                     />
                 </ul>
             </footer>

@@ -12,7 +12,11 @@ html {
 }
 
 body {
+    background: #42dee1;
+    display: grid;
     font-family: 'Montserrat', sans-serif;
+    grid-template-rows: auto fit-content(8rem);
+    height: 100%;
     margin: 0;
     padding-top: 4.3rem;
 }
@@ -94,10 +98,11 @@ body {
 
 .main-nav__item a,
 .mobile-nav__item a {
-    text-decoration: none;
     color: var(--dark-green);
+    cursor: pointer;
     font-weight: bold;
     padding: 0.2rem 0;
+    text-decoration: none;
 }
 
 .main-nav__item a:hover,
@@ -162,15 +167,14 @@ body {
 
 .about-us__container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 #about-us {
-    background: #42dee1;
-    border-radius: 0 0 0 25%/0 0 0 50%;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background: #3fc5f0;
+    box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
     color: white;
-    margin: 0 0 5rem 2rem;
+    margin-top: 10%;
     padding: 2rem;
     text-align: right;
     width: 75%;
@@ -239,9 +243,14 @@ body {
 
 .main-footer {
     background: #eef5b2;
+    border-radius: 16px 16px 0 0;
+    bottom: 0;
     color: var(--dark-green);
+    margin: auto;
     padding: 1rem;
+    position: fixed;
     text-align: center;
+    width: 100%;
 }
 
 .sign-up__button {
@@ -277,6 +286,8 @@ body {
 }
 
 .main-footer__items {
+    display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -329,11 +340,6 @@ body {
     
     .toggle-button {
         display: none;
-    }
-
-    .main-footer__items {
-        display: flex;
-        justify-content: center;
     }
 
     .main-nav {

@@ -6,15 +6,39 @@ import Location from "./Location/Location";
 
 function Body() {
 
-    const [content, setContent] = useState(<MainIntro />);
+    const [content, setContent] = useState(
+        <div>
+            <MainIntro show={true}/>
+            <AboutUs show={false}/>
+            <Location show={false}/>
+        </div>    
+        );
     
     function handleClick(content) {
         if (content === "aboutus") {
-            setContent(<AboutUs show="true"/>);
+            setContent(
+            <div>
+                <MainIntro show={false}/>
+                <AboutUs show={true}/>
+                <Location show={false}/>
+            </div>   
+            );
         } else if (content === "location") {
-            setContent(<Location />);
+            setContent(
+            <div>
+                <MainIntro show={false}/>
+                <AboutUs show={false}/>
+                <Location show={true}/>
+            </div>   
+            );
         } else {
-            setContent(<MainIntro />);
+            setContent(
+            <div>
+                <MainIntro show={true}/>
+                <AboutUs show={false}/>
+                <Location show={false}/>
+            </div>   
+            );
         }
     }
 

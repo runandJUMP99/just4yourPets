@@ -1,12 +1,15 @@
 import React from "react";
 
-function MainIntro() {
+function MainIntro(props) {
     return (
-        <div class="main-intro">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-4">hi, i'm bob</h1>
-                    <p class="lead">i sell great products, for less!</p>
+        <div className="main-intro" style={{
+            transform: props.show ? "translateY(0)" : "translateY(-100vh)",
+            opacity: props.show ? 1 : 0
+        }}>
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                    <h1 className="display-4">hi, i'm bob</h1>
+                    <p className="lead">i sell great products, for less!</p>
                 </div>
             </div>
         </div>

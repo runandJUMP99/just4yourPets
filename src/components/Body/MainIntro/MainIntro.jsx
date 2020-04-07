@@ -3,8 +3,9 @@ import React from "react";
 function MainIntro(props) {
     return (
         <div className="main-intro" style={{
-            transform: props.show ? "translateY(0)" : "translateY(-100vh)",
-            opacity: props.show ? 1 : 0
+            opacity: props.show ? 1 : 0,
+            transform: props.show ? "translateY(0)" : "translateY(-1000px)",
+            zIndex: props.show ? 10 : 0
         }}>
             <div className="jumbotron jumbotron-fluid">
                 <div className="container">

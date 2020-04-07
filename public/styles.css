@@ -13,37 +13,34 @@ html {
 
 body {
     background: #42dee1;
-    display: grid;
     font-family: 'Montserrat', sans-serif;
-    grid-template-rows: auto fit-content(8rem);
     height: 100%;
     margin: 0;
-    padding-top: 4.3rem;
 }
 
 /* HEADER */
 
 .main-nav__items {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-    display: flex;
-}
-
-.main-nav__item {
-    margin: 0 1rem;
 }
 
 .main-nav__item a {
+    border-radius: 16px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     color: var(--dark-green);
     cursor: pointer;
     font-weight: bold;
-    padding: 0.2rem 0;
+    margin: 0 1rem;
+    padding: 0.5rem 2rem;
     text-decoration: none;
 }
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     color: white;
 }
 
@@ -54,8 +51,14 @@ body {
 .cta-button a {
     color: white;
     background: var(--highlight-color);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    list-style: none;
     padding: 0.5rem 1rem;
     border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 1rem;
+    text-decoration: none;
 }
 
 .cta-button a:hover,
@@ -63,6 +66,22 @@ body {
     color: var(--highlight-color);
     background: white;
     border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button__container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 2rem auto;
+    padding: 0;
+    transition: all 0.5s ease-out;
+}
+
+.cta-button__top {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 /* MAIN CONTENT */
@@ -77,7 +96,7 @@ body {
 .jumbotron {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
     url("https://www.fleamarketinsiders.com/wp-content/uploads/2018/06/Fleamasters-Flea-Market-e1530191071386.jpg") center/cover no-repeat border-box, var(--highlight-color);
-    height: 15rem;
+    height: 100vh;
     margin-bottom: 0;
 }
 
@@ -186,7 +205,7 @@ body {
 .main-footer {
     background: #eef5b2;
     border-radius: 16px 16px 0 0;
-    box-shadow: 0 -2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -1px  1px 1px rgba(0, 0, 0, 0.5);
     bottom: 0;
     color: var(--dark-green);
     margin: auto;
@@ -195,11 +214,12 @@ body {
     position: fixed;
     text-align: center;
     width: 100%;
+    z-index: 100;
 }
 
 .main-footer a:hover,
 .main-footer a:active {
-    color: #3fc5f0;
+    color: #693f07;
 }
 
 .main-footer__items {
@@ -211,10 +231,6 @@ body {
 }
 
 @media (min-width: 41rem) {
-    body {
-        padding-top: 2.9rem;
-    }
-
     .main-nav {
         display: flex;
     }

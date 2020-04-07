@@ -6,7 +6,8 @@ function AboutUs(props) {
         <div className="about-us__container"
         style={{
             opacity: props.show ? 1 : 0,
-            transform: props.show ? "translateY(0)" : "translateY(-100vh)"
+            transform: props.show ? "translateY(0)" : "translateY(-100vh)",
+            zIndex: props.show ? 10 : 0
         }}>
             <div id="about-us">
                 <h2>This is the about us section</h2>

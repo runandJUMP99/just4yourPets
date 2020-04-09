@@ -8,9 +8,11 @@ function Location(props) {
             transform: props.show ? "translateY(0)" : "translateY(-1000px)",
             zIndex: props.show ? 10 : 0
         }}>
-            <h2>Come visit us Friday, Saturday, or Sunday at the Daytona Flea Market</h2>
-            <h5>1425 Tomoka Farms Rd, Daytona Beach, FL 32124</h5>
-            <p>9 am - 5 pm</p>
+            <div className="location-info">
+                <h2>Come visit us Friday, Saturday, or Sunday at the Daytona Flea Market</h2>
+                <h5>1425 Tomoka Farms Rd, Daytona Beach, FL 32124</h5>
+                <p>9 am - 5 pm</p>
+            </div>
             <GoogleMap />
         </div>
     );

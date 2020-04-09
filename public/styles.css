@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: #42dee1;
+    background-color: #42dee1;
     font-family: 'Montserrat', sans-serif;
     height: 100%;
     margin: 0;
@@ -29,7 +29,7 @@ body {
 
 .main-nav__item a {
     border-radius: 16px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     color: var(--dark-green);
     cursor: pointer;
     font-weight: bold;
@@ -40,24 +40,19 @@ body {
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     color: white;
-}
-
-.cta-button {
-    animation: wiggle 600ms 2s 2 linear;
 }
 
 .cta-button a {
     color: white;
     background: var(--highlight-color);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     list-style: none;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
-    margin: 0 1rem;
     text-decoration: none;
 }
 
@@ -66,22 +61,16 @@ body {
     color: var(--highlight-color);
     background: white;
     border: none;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button__container {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 2rem auto;
+    margin: 0.5rem auto;
     padding: 0;
     transition: all 0.5s ease-out;
-}
-
-.cta-button__top {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
 }
 
 /* MAIN CONTENT */
@@ -89,14 +78,18 @@ body {
 /* MAIN INTRO */
 
 .main-intro {
+    background-color: #eee;
+    box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
+    margin: 2.5rem auto;
+    padding: 1rem;
     position: relative;
     transition: all 0.5s ease-out;
+    width: 80%;
 }
 
 .jumbotron {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
     url("https://www.fleamarketinsiders.com/wp-content/uploads/2018/06/Fleamasters-Flea-Market-e1530191071386.jpg") center/cover no-repeat border-box, var(--highlight-color);
-    height: 100vh;
     margin-bottom: 0;
 }
 
@@ -105,7 +98,6 @@ body {
     color: #eee;
     left: 5%;
     position: absolute;
-    width: auto;
 }
 
 .container h1 {
@@ -120,18 +112,18 @@ body {
 /* ABOUT US */
 
 .about-us__container {
+    display: flex;
     justify-content: center;
-    left: 20%;
     position: fixed;
-    top: 20%;
+    top: 15%;
     transition: all 0.5s ease-out;
+    width: 100%;
 }
 
 #about-us {
-    background: #3fc5f0;
+    background: #eee;
     box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
-    color: white;
-    margin-top: 10%;
+    color: #3fc5f0;
     padding: 2rem;
     text-align: right;
     width: 75%;
@@ -140,24 +132,29 @@ body {
 /* LOCATION */
 
 #location {
-    color: white;
-    background: #42dee1;
-    border-radius: 0 25% 0 0/0 20% 0 0;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-    left: 20%;
+    color: #3fc5f0;
+    background: #eee;
+    box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
     padding: 2rem;
     position: fixed;
-    top: 20%;
+    top: 15%;
     transition: all 0.5s ease-out;
-    width: 75%;
 }
 
-#location h2 {
+.location-info {
+    border-right: 1px solid white;
+    margin-right: 1rem;
+    padding-right: 2rem;
+}
+
+.location-info h2 {
     font-weight: bold;
     padding: 2rem 0;
 }
 
-#location p {
+.location-info p {
     padding-bottom: 1.5rem;
 }
 
@@ -202,17 +199,20 @@ body {
 
 /* FOOTER */
 
+.main-footer__container {
+    display: flex;
+    justify-content: center;
+}
+
 .main-footer {
     background: #eef5b2;
     border-radius: 16px 16px 0 0;
-    box-shadow: 0 -1px  1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 -1px 4px 2px rgba(0, 0, 0, 0.5);
     bottom: 0;
     color: var(--dark-green);
-    margin: auto;
     max-width: 1000px;
     padding: 1rem;
     position: fixed;
-    text-align: center;
     width: 100%;
     z-index: 100;
 }

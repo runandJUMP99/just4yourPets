@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import AboutUs from "./AboutUs/AboutUs";
 import CTAButton from "../CTAButton";
+import CTAButtonTop from "../CTAButtonTop";
 import Footer from "../Footer/Footer";
 import Location from "./Location/Location";
 import MainIntro from "./MainIntro/MainIntro";
@@ -9,9 +10,7 @@ function Body() {
 
     const [content, setContent] = useState(
         <div>
-            <div className="cta-button__top">
-                <CTAButton show={false} />
-            </div>
+            <CTAButtonTop show={false} />
             <MainIntro show={true} />
             <AboutUs show={false}/>
             <Location show={false}/>
@@ -23,9 +22,7 @@ function Body() {
         if (content === "aboutus") {
             setContent(
             <div>
-                <div className="cta-button__top">
-                    <CTAButton show={true} />
-                </div>
+                <CTAButtonTop show={true} />
                 <MainIntro show={false}/>
                 <AboutUs show={true} />
                 <Location show={false}/>
@@ -35,9 +32,7 @@ function Body() {
         } else if (content === "location") {
             setContent(
             <div>
-                <div className="cta-button__top">
-                    <CTAButton show={true} />
-                </div>
+                <CTAButtonTop show={true} />
                 <MainIntro show={false}/>
                 <AboutUs show={false}/>
                 <Location show={true} />
@@ -47,9 +42,7 @@ function Body() {
         } else {
             setContent(
             <div>
-                <div className="cta-button__top">
-                    <CTAButton show={false} />
-                </div>
+                <CTAButtonTop show={false} />
                 <MainIntro show={true} />
                 <AboutUs show={false}/>
                 <Location show={false}/>

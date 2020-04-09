@@ -4,9 +4,9 @@ import NavItem from "../Header/NavItem";
 
 function Footer(props) {
     return(
-        <div className="main-footer__container">
-            <footer className="main-footer">
-                <ul class="main-footer__items">
+        <div className="main-nav__container">
+            <footer className="main-nav">
+                <ul className="main-nav__items">
                     <NavItem 
                     href="#home"
                     item="Home"

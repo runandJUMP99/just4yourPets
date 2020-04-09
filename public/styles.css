@@ -20,30 +20,6 @@ body {
 
 /* HEADER */
 
-.main-nav__items {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.main-nav__item a {
-    border-radius: 16px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-    color: var(--dark-green);
-    cursor: pointer;
-    font-weight: bold;
-    margin: 0 1rem;
-    padding: 0.5rem 2rem;
-    text-decoration: none;
-}
-
-.main-nav__item a:hover,
-.main-nav__item a:active {
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
 .cta-button a {
     color: white;
     background: var(--highlight-color);
@@ -65,11 +41,15 @@ body {
 }
 
 .cta-button__container {
+    bottom: 20%;
     display: flex;
     justify-content: center;
+    left: 0;
     list-style: none;
     margin: 0.5rem auto;
     padding: 0;
+    position: fixed;
+    right: 0;
     transition: all 0.5s ease-out;
 }
 
@@ -80,9 +60,11 @@ body {
 .main-intro {
     background-color: #eee;
     box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
+    left: 0;
     margin: 2.5rem auto;
     padding: 1rem;
-    position: relative;
+    position: fixed;
+    right: 0;
     transition: all 0.5s ease-out;
     width: 80%;
 }
@@ -90,6 +72,7 @@ body {
 .jumbotron {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
     url("https://www.fleamarketinsiders.com/wp-content/uploads/2018/06/Fleamasters-Flea-Market-e1530191071386.jpg") center/cover no-repeat border-box, var(--highlight-color);
+    height: 25rem;
     margin-bottom: 0;
 }
 
@@ -137,8 +120,10 @@ body {
     box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
+    left: 0;
     padding: 2rem;
     position: fixed;
+    right: 0;
     top: 15%;
     transition: all 0.5s ease-out;
 }
@@ -199,44 +184,84 @@ body {
 
 /* FOOTER */
 
-.main-footer__container {
+/* .main-footer__container {
+    display: flex;
+    justify-content: center;
+} */
+
+.main-nav__container {
     display: flex;
     justify-content: center;
 }
 
-.main-footer {
+.main-nav {
     background: #eef5b2;
     border-radius: 16px 16px 0 0;
     box-shadow: 0 -1px 4px 2px rgba(0, 0, 0, 0.5);
     bottom: 0;
     color: var(--dark-green);
     max-width: 1000px;
-    padding: 1rem;
+    padding: 0.5rem;
     position: fixed;
     width: 100%;
     z-index: 100;
 }
 
-.main-footer a:hover,
-.main-footer a:active {
-    color: #693f07;
-}
-
-.main-footer__items {
+.main-nav__items {
     display: flex;
-    justify-content: space-between;
     list-style: none;
-    margin: 0 2rem;
+    justify-content: space-around;
+    margin-bottom: 0;
     padding: 0;
 }
 
-@media (min-width: 41rem) {
-    .main-nav {
-        display: flex;
-    }
-    
+.main-nav__item {
+    margin: 0.2rem 0;
+}
+
+.main-nav__item a {
+    border-radius: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    color: var(--dark-green);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    color: #693f07;
+}
+
+.main-nav__item a:active {
+    background: #e4ee8e;
+}
+
+@media (max-width: 370px) {
     .jumbotron {
-        height: 30rem;
+        height: 15rem;
+    }
+
+    .cta-button__container {
+        bottom: intial;
+        top: 50%;
+    }
+
+    .main-nav__items {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main-nav__item {
+        margin: 0.5rem 0;
+    }
+
+    .main-nav__item a {
+        display: block;
+        text-align: center;
+        width: 15rem;        
     }
 }
 
@@ -251,11 +276,3 @@ body {
         transform: rotateZ(0deg);
     }
 }
-
-
-/* COLORS
-3fc5f0 -- ABOUTUS COLOR
-42dee1 -- BACKGROUND COLOR
-6decb9 -- FOOTER COLOR
-eef5b2 -- HEADER COLOR
- */

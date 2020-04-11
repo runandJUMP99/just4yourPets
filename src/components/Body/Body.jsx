@@ -13,10 +13,9 @@ function Body() {
     const [content, setContent] = useState(
         <div>
             <CTAButtonTop show={false} onClick={openModal}/>
-            <MainIntro show={true} />
+            <MainIntro show={true} modal={openModal}/>
             <AboutUs show={false}/>
             <Location show={false}/>
-            <CTAButton show={true} onClick={openModal}/>
         </div>                
         );
 
@@ -30,39 +29,38 @@ function Body() {
             setContent(
             <div>
                 <CTAButtonTop show={true} onClick={openModal}/>
-                <MainIntro show={false}/>
+                <MainIntro show={false} modal={openModal}/>
                 <AboutUs show={true} />
-                <Location show={false}/>
-                <CTAButton show={false} onClick={openModal}/>    
+                <Location show={false}/>    
             </div>   
             );
         } else if (content === "location") {
             setContent(
             <div>
                 <CTAButtonTop show={true} onClick={openModal}/>
-                <MainIntro show={false}/>
+                <MainIntro show={false} modal={openModal}/>
                 <AboutUs show={false}/>
                 <Location show={true} />
-                <CTAButton show={false} onClick={openModal}/>
             </div>   
             );
         } else {
             setContent(
             <div>
                 <CTAButtonTop show={false} onClick={openModal}/>
-                <MainIntro show={true} />
+                <MainIntro show={true} modal={openModal}/>
                 <AboutUs show={false}/>
                 <Location show={false}/>
-                <CTAButton show={true} onClick={openModal}/>
             </div>   
             );
         }
     }
 
-    function openModal(prevValue) {
-        setModal({
-            showBackdrop: !prevValue.showBackdrop,
-            showModal: !prevValue.showModal
+    function openModal() {
+        setModal(prevValue => {
+            return {
+                showBackdrop: !prevValue.showBackdrop,
+                showModal: !prevValue.showModal
+            };
         });
     }
 

@@ -1,4 +1,7 @@
 import React from "react";
+import CTAButton from "../../CTAButton";
+import Jumbotron from "./Jumbotron";
+import Logo from "../../Logo";
 
 function MainIntro(props) {
     return (
@@ -7,11 +10,10 @@ function MainIntro(props) {
             transform: props.show ? "translateY(0)" : "translateY(-1000px)",
             zIndex: props.show ? 10 : 0
         }}>
-            <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                    <h1 className="display-4">hi, i'm bob</h1>
-                    <p className="lead">i sell great products, for less!</p>
-                </div>
+            <Jumbotron />
+            <div className="main-intro__bottom">
+                <Logo />
+                <CTAButton show={props.show} onClick={props.modal}/>
             </div>
         </div>
     );

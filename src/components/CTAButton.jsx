@@ -8,8 +8,8 @@ function CTAButton(props) {
                 zIndex: props.show ? 10 : 0
             }}>
             <li className="cta-button">
-            <a href="https://www.storenvy.com/just4yourPets">Start Shopping!</a>
-        </li>
+                <button onClick={props.onClick}>start shopping!</button>
+            </li>
         </ul>
     );
 }

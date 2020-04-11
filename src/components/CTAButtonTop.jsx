@@ -17,7 +17,7 @@ function CTAButtonTop(props) {
     return (
         <ul className="cta-button__container" style={styles}>
             <li className="cta-button">
-                <a href="https://www.storenvy.com/just4yourPets">Start Shopping!</a>
+                <button onClick={props.onClick}>start shopping!</button>
             </li>
         </ul>
     );

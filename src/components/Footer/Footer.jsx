@@ -9,17 +9,17 @@ function Footer(props) {
                 <ul className="main-nav__items">
                     <NavItem 
                     href="#home"
-                    item="Home"
+                    item="home"
                     onClick={() => props.onClick("home")}
                     />
                     <NavItem 
                     href="#about-us"
-                    item="About Us"
+                    item="about us"
                     onClick={() => props.onClick("aboutus")}
                     />
                     <NavItem 
                     href="#location"
-                    item="Location"
+                    item="location"
                     onClick={() => props.onClick("location")}
                     />
                 </ul>

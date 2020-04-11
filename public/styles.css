@@ -18,11 +18,85 @@ body {
     margin: 0;
 }
 
-/* HEADER */
 
-.cta-button a {
+/* MODAL */
+
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.2s linear;
+}
+
+.modal {
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    height: initial;
+    left: 30%;
+    padding: 1rem;
+    position: fixed;
+    top: 10%;
+    transition: opacity 0.2s ease-out, transform 0.5s ease-out;
+    width: 40%;
+}
+
+.modal__alert {
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+.modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+    text-align: center;
+}
+
+.modal__action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+    background: red;
+    border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+    background: #ff5454;
+    border-color: #ff5454;
+}
+
+
+/* CTA BUTTON */
+
+
+
+.cta-button button {
     color: white;
     background: var(--highlight-color);
+    border: none;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     list-style: none;
     padding: 0.5rem 1rem;
@@ -32,8 +106,8 @@ body {
     text-decoration: none;
 }
 
-.cta-button a:hover,
-.cta-button a:active {
+.cta-button button:hover,
+.cta-button button:active {
     color: var(--highlight-color);
     background: white;
     border: none;
@@ -53,9 +127,15 @@ body {
     transition: all 0.5s ease-out;
 }
 
+
+
 /* MAIN CONTENT */
 
+
+
 /* MAIN INTRO */
+
+
 
 .main-intro {
     background-color: #eee;
@@ -92,7 +172,11 @@ body {
     font-size: 1rem;
 }
 
+
+
 /* ABOUT US */
+
+
 
 .about-us__container {
     display: flex;
@@ -112,7 +196,11 @@ body {
     width: 75%;
 }
 
+
+
 /* LOCATION */
+
+
 
 #location {
     color: #3fc5f0;
@@ -149,7 +237,11 @@ body {
     background-color: grey;
 }
 
+
+
 /* CTA SECTION */
+
+
 
 #cta-section {
     background: #3fc5f0;
@@ -182,12 +274,11 @@ body {
     color: white;
 }
 
+
+
 /* FOOTER */
 
-/* .main-footer__container {
-    display: flex;
-    justify-content: center;
-} */
+
 
 .main-nav__container {
     display: flex;

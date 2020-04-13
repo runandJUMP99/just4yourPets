@@ -4,8 +4,8 @@ import Body from "./Body/Body";
 function App() {
 
   return (<div>
-    <Body />
-  </div>
+            <Body />
+          </div>
   );
 }
 

@@ -5,6 +5,7 @@ import CTAButton from "../CTAButton";
 import CTAButtonTop from "../CTAButtonTop";
 import Footer from "../Footer/Footer";
 import Location from "./Location/Location";
+import Logo from "../Logo";
 import MainIntro from "./MainIntro/MainIntro";
 import Modal from "../Modal";
 
@@ -68,6 +69,7 @@ function Body() {
         <div>
             <Backdrop show={modal.showBackdrop} onClick={openModal} />
             <Modal show={modal.showModal} onClick={openModal} />
+            <Logo />
             {content}
             <Footer onClick={handleClick} />
         </div>

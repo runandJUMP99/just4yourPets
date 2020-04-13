@@ -5,7 +5,7 @@ function CTAButton(props) {
         <ul className="cta-button__container" style={{
                 opacity: props.show ? 1 : 0,
                 transform: props.show ? "translateY(0)" : "translateY(-1000px)",
-                zIndex: props.show ? 10 : 0
+                zIndex: props.show ? 11 : 0
             }}>
             <li className="cta-button">
                 <button onClick={props.onClick}>start shopping!</button>

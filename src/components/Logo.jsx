@@ -1,11 +1,7 @@
 import React from "react";
 
 function Logo() {
-    return (
-        <a href="index.html" className="logo">
-        just4yourPets
-        </a>
-    );
+    return <a className="logo" href="index.html" >just4yourPets</a>
 }
 
 export default Logo;

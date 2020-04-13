@@ -1,8 +1,3 @@
-:root {
-    --dark-green: #0e4f1f;
-    --highlight-color: #3fc5f0;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -16,6 +11,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 
@@ -96,9 +92,18 @@ body {
 
 
 .logo {
-    border-right: 1px dotted white;
-    padding: 5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: auto;
     position: fixed;
+    text-align: center;
+    top: 0.25rem;
+    width: 100%;
+    z-index: 11;
+}
+
+.logo:hover {
+    text-decoration: none;
 }
 
 
@@ -107,34 +112,35 @@ body {
 
 
 .cta-button__container {
-    bottom: 20%;
+    bottom: 33%;
     display: flex;
+    font-size: 2rem;
     justify-content: center;
     list-style: none;
     margin: 0.5rem auto;
     padding: 0;
-    position: fixed;
+    position: absolute;
     right: 10%;
     transition: all 1s ease-out;
 }
 
 .cta-button button {
-    color: white;
-    background: var(--highlight-color);
+    background: #3fc5f0;
     border: none;
+    border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
     font-family: 'Baloo Tamma 2', cursive;
+    font-weight: bold;
     list-style: none;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
     text-decoration: none;
 }
 
 .cta-button button:hover,
 .cta-button button:active {
-    color: var(--highlight-color);
+    color: #3fc5f0;
     background: white;
     border: none;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
@@ -150,38 +156,42 @@ body {
 
 
 
-.main-intro {
-    background-color: #eee;
+#main-intro {
+    background-color: #33ffcc;
     box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
     height: 100vh;
-    left: 0;
-    padding: 2.5rem 1rem;
-    position: fixed;
-    right: 0;
-    transition: all 1s ease-out;
-}
-
-.jumbotron {
-    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
-    url("https://www.fleamarketinsiders.com/wp-content/uploads/2018/06/Fleamasters-Flea-Market-e1530191071386.jpg") center/cover no-repeat border-box, var(--highlight-color);
-    height: 25rem;
-    margin-bottom: 0;
-}
-
-.container {
-    bottom: 10%;
-    color: #eee;
-    left: 5%;
+    padding: 4rem 1rem 0;
     position: absolute;
+    transition: all 1s ease-out;
+    width: 100%;
 }
 
-.container h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
+.main-jumbotron {
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), 
+    url("https://www.fleamarketinsiders.com/wp-content/uploads/2018/06/Fleamasters-Flea-Market-e1530191071386.jpg") center/cover no-repeat border-box, #3fc5f0;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
 }
 
-.container p {
-    font-size: 1rem;
+.main-intro__bottom {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 2rem 1rem;
+    margin: 2rem auto 0;
+    max-width: 1000px;
+    position: relative;
+}
+
+.main-intro__bottom__text {
+    border-right: 4px dotted #dbdbdb;
+    padding-left: 1rem;
+    padding-right: 5rem;
 }
 
 
@@ -193,19 +203,17 @@ body {
 .about-us__container {
     display: flex;
     justify-content: center;
-    position: fixed;
-    top: 15%;
+    position: absolute;
     transition: all 1s ease-out;
     width: 100%;
 }
 
 #about-us {
-    background: #eee;
+    background-color: #33ffcc;
     box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
     color: #3fc5f0;
     padding: 2rem;
     text-align: right;
-    width: 75%;
 }
 
 
@@ -215,14 +223,14 @@ body {
 
 
 #location {
-    color: #3fc5f0;
-    background: #eee;
+    background-color: #33ffcc;
     box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
+    color: #3fc5f0;
     display: flex;
     justify-content: center;
     left: 0;
     padding: 2rem;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 15%;
     transition: all 1s ease-out;
@@ -251,43 +259,6 @@ body {
 
 
 
-/* CTA SECTION */
-
-
-
-#cta-section {
-    background: #3fc5f0;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    list-style: none;
-    padding: 5rem;
-    text-align: center;
-}
-
-#cta-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-#cta-section p {
-    font-size: 1.5rem;
-    font-weight: normal;
-}
-
-#cta-section a {
-    background: white;
-    color: #42dee1;
-}
-
-#cta-section a:hover,
-#cta-section a:active {
-    background: #6decb9;
-    color: white;
-}
-
-
-
 /* FOOTER */
 
 
@@ -302,10 +273,10 @@ body {
     border-radius: 16px 16px 0 0;
     box-shadow: 0 -1px 4px 2px rgba(0, 0, 0, 0.5);
     bottom: 0;
-    color: var(--dark-green);
+    color: #0e4f1f;
     font-family: 'Baloo Tamma 2', cursive;
     max-width: 1000px;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -326,7 +297,7 @@ body {
 .main-nav__item a {
     border-radius: 16px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-    color: var(--dark-green);
+    color: #0e4f1f;
     cursor: pointer;
     font-weight: bold;
     padding: 0.5rem 1.5rem;
@@ -350,14 +321,13 @@ body {
     }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 440px) {
     .jumbotron {
         height: 15rem;
     }
 
-    .cta-button__container {
-        bottom: intial;
-        top: 50%;
+    .main-nav {
+        padding: 0.2rem;
     }
 
     .main-nav__items {

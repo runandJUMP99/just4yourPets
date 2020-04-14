@@ -7,9 +7,10 @@ function CTAButtonTop(props) {
         bottom: "initial",
         fontSize: "1rem",
         left: "initial",
+        padding: 0,
         position: "fixed",
         right: "1rem",
-        top: "1rem",
+        top: "0.25rem",
         opacity: props.show ? 1 : 0,
         transform: props.show ? "translateY(0)" : "translateY(-1000px)",
         zIndex: props.show ? 11 : 0

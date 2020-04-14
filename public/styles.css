@@ -11,7 +11,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     height: 100%;
     margin: 0;
-    overflow: hidden;
 }
 
 
@@ -200,22 +199,63 @@ body {
 
 
 
-.about-us__container {
+#about-us {
+    background-color: #33ffcc;
+    box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
     display: flex;
+    height: 100%;
     justify-content: center;
+    padding: 7rem 5rem;
     position: absolute;
     transition: all 1s ease-out;
     width: 100%;
 }
 
-#about-us {
-    background-color: #33ffcc;
-    box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
-    color: #3fc5f0;
+.about-us__content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    max-width: 1000px;
     padding: 2rem;
-    text-align: right;
 }
 
+.about-us__carousel {
+    width: 20rem;
+}
+
+.about-us__carousel img {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-us__text {
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    text-align: right;
+    width: 80%;
+}
+
+.about-us__text h2 {
+    margin-left: auto;
+    padding-bottom: 1rem;
+    width: 70%;
+}
+
+.about-us__text p {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    text-align: left;
+    width: 70%;
+}
+
+.about-us__text-divider {
+    border-bottom: 8px dotted #dbdbdb;
+    height: 0;
+    margin: 2rem auto;
+    width: 60%;
+}
 
 
 /* LOCATION */
@@ -225,30 +265,41 @@ body {
 #location {
     background-color: #33ffcc;
     box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
-    color: #3fc5f0;
     display: flex;
+    height: 100%;
     justify-content: center;
-    left: 0;
     padding: 2rem;
     position: absolute;
-    right: 0;
-    top: 15%;
+    top: 0;
     transition: all 1s ease-out;
+    width: 100%;
 }
 
-.location-info {
-    border-right: 1px solid white;
-    margin-right: 1rem;
-    padding-right: 2rem;
+.location__content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+    padding: 2rem;
 }
 
-.location-info h2 {
+.location-text h2 {
     font-weight: bold;
     padding: 2rem 0;
 }
 
-.location-info p {
-    padding-bottom: 1.5rem;
+.location-info__divider {
+    border-bottom: 8px dotted #dbdbdb;
+    height: 0;
+    margin: 2rem auto;
+    padding-top: 2rem;
+    width: 30%;
+}
+
+.small {
+    display: none;
 }
 
 #map {
@@ -259,7 +310,7 @@ body {
 
 
 
-/* FOOTER */
+/* MAIN-NAV - FOOTER */
 
 
 
@@ -314,16 +365,163 @@ body {
     background: #e4ee8e;
 }
 
+@media (max-width: 900px) {
+    .about-us__text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .logo {
+        padding-left: 1rem;
+        text-align: left;
+    }
+
+    .cta-button__container {
+        padding-top: 2rem;
+        position: static;
+    }
+
+    .main-jumbotron {
+        height: 10rem;
+    }
+
+    .main-intro__bottom {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-intro__bottom__text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main-intro__bottom__text {
+        border-bottom: 8px dotted #dbdbdb;
+        border-right: none;
+        flex-direction: column;
+    }
+
+    .main-intro__bottom__text h1 {
+        font-size: 2rem;
+    }
+
+    .about-us__container {
+        position: static;
+    }
+
+    .about-us__content {
+        position: relative;
+        bottom: 7%;
+    }
+
+    .about-us__text p {
+        padding-top: 0;
+    }
+
+    .location__content {
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+
+    .location-text h2 {
+        font-size: 1.5rem;
+        margin-right: 2rem;
+        padding-top: 0;
+    }
+
+    .location-text {
+        display: flex;
+    }
+
+    .location-info__divider {
+        height: 0;
+        margin: 0 auto 2rem;
+        width: 30%;
+    }
+    
+    .big {
+        display: none;
+    }
+
+    .small {
+        display: block;
+    }
+
+    #map {
+        height: 12rem;
+    }
+}
+
 @media (max-width: 535px) {
     .shopping-modal {
         left: 10%;
         width: 80%;
     }
+
+    .location-text h2 {
+        font-size: 1.5em;
+    }
+
+    .location-text h5 {
+        font-size: 1rem;
+    }
+
+    .location-text p {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 440px) {
+    .logo {
+        font-size: 1.2rem;
+        top: 1.1rem;
+    }
+
+    .cta-button__container {
+        font-size: 1rem;
+    }
+
+    .small {
+        font-size: 1rem !important;
+    }
+
+    .main-intro__bottom__cta-button {
+        font-size: 1.5rem;
+    }
+
     .jumbotron {
         height: 15rem;
+    }
+
+    .about-us__text h2 {
+        font-size: 1.2rem;
+        margin: 0 1rem;
+        text-align: right;
+        width: 70%;
+    }
+
+    .about-us__text p {
+        padding-left: 1rem;
+        width: 70%;
+    }
+
+    .about-us__carousel {
+        margin-left: 0.5rem;
+    }
+
+    .location-text h2 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .location-info__divider {
+        padding: 0;
+    }
+
+    #map {
+        height: 10rem;
     }
 
     .main-nav {
@@ -336,7 +534,7 @@ body {
     }
 
     .main-nav__item {
-        margin: 0.5rem 0;
+        margin: 0.15rem 0;
     }
 
     .main-nav__item a {

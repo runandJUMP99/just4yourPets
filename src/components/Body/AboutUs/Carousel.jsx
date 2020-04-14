@@ -8,7 +8,7 @@ import furJacket from "../../../images/fur-jacket.jpg";
 
 function Carousel() {
     return (
-        <div>
+        <div className="about-us__carousel">
             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">

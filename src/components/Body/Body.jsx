@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import AboutUs from "./AboutUs/AboutUs";
 import Backdrop from "../Backdrop";
-import CTAButton from "../CTAButton";
 import CTAButtonTop from "../CTAButtonTop";
 import Footer from "../Footer/Footer";
 import Location from "./Location/Location";

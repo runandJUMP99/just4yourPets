@@ -7,7 +7,7 @@ function Modal(props) {
             transform: props.show ? "translateY(0)" : "translateY(-3rem)",
             zIndex: props.show ? 102 : 0
         }}>
-            <h2 className="shopping-modal__alert">you are about to be redirected to another site</h2>
+            <h2 className="shopping-modal__alert">to continue shopping, you will be redirected to another site</h2>
             <h3 className="shopping-modal__title">do you wish to continue?</h3>
             <div className="shopping-modal__actions">
                 <button className="shopping-modal__action shopping-modal__action--negative" onClick={props.onClick} type="button">no!</button>

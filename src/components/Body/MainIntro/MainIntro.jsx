@@ -1,5 +1,5 @@
 import React from "react";
-import CTAButton from "../../CTAButton";
+import CTAButton from "../../Global/CTAButton";
 import Jumbotron from "./Jumbotron";
 
 function MainIntro(props) {

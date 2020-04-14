@@ -4,8 +4,7 @@ function Modal(props) {
     return (
         <div className="shopping-modal" style={{
             opacity: props.show ? 1 : 0,
-            transform: props.show ? "translateY(0)" : "translateY(-3rem)",
-            zIndex: props.show ? 102 : 0
+            transform: props.show ? "translateY(0)" : "translateY(-100vh)",
         }}>
             <h2 className="shopping-modal__alert">to continue shopping, you will be redirected to another site</h2>
             <h3 className="shopping-modal__title">do you wish to continue?</h3>

@@ -1,6 +1,5 @@
 import React from "react";
-import Newsletter from "./Newsletter";
-import NavItem from "../Header/NavItem";
+import NavItem from "./NavItem";
 
 function Footer(props) {
     return(

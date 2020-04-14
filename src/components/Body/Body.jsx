@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import AboutUs from "./AboutUs/AboutUs";
-import Backdrop from "../Backdrop";
-import CTAButtonTop from "../CTAButtonTop";
+import Backdrop from "../Global/Backdrop";
+import CTAButtonTop from "../Global/CTAButtonTop";
 import Footer from "../Footer/Footer";
 import Location from "./Location/Location";
-import Logo from "../Logo";
+import Logo from "../Global/Logo";
 import MainIntro from "./MainIntro/MainIntro";
-import Modal from "../Modal";
+import Modal from "../Global/Modal/Modal";
 
 function Body() {
 

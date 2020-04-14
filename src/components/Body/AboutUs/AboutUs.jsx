@@ -10,7 +10,7 @@ function AboutUs(props) {
             zIndex: props.show ? 10 : 0
         }}>
             <div className="about-us__content">
-            <Carousel />
+                <Carousel />
                 <div className="about-us__text">
                     <h2>we aim to provide a variety of unique, helpful, and <span>fun</span> products for your pet</h2>
                     <div className="about-us__text-divider"></div>

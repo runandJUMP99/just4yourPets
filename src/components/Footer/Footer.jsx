@@ -1,20 +1,25 @@
 import React from "react";
-import Newsletter from "./Newsletter";
-import NavItem from "../Header/NavItem";
+import NavItem from "./NavItem";
 
-function Footer() {
+function Footer(props) {
     return(
-        <div>
-            <footer className="main-footer">
-                <Newsletter />
-                <ul class="main-footer__items">
+        <div className="main-nav__container">
+            <footer className="main-nav">
+                <ul className="main-nav__items">
+                    <NavItem 
+                    href="#home"
+                    item="home"
+                    onClick={() => props.onClick("home")}
+                    />
                     <NavItem 
                     href="#about-us"
-                    item="About Us"
+                    item="about us"
+                    onClick={() => props.onClick("aboutus")}
                     />
                     <NavItem 
                     href="#location"
-                    item="Location"
+                    item="location"
+                    onClick={() => props.onClick("location")}
                     />
                 </ul>
             </footer>

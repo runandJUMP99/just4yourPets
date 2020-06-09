@@ -1,14 +1,22 @@
 import React from "react";
 import Carousel from "./Carousel";
 
-function AboutUs() {
+function AboutUs(props) {
     return (
-        <div class="about-us__container">
-            <div id="about-us">
-                <h2>This is the about us section</h2>
-                <p>This is the about us content</p>
+        <div id="about-us"
+        style={{
+            opacity: props.show ? 1 : 0,
+            transform: props.show ? "translateY(0)" : "translateY(-100vh)",
+            zIndex: props.show ? 10 : 0
+        }}>
+            <div className="about-us__content">
                 <Carousel />
-            </div>    
+                <div className="about-us__text">
+                    <h2>we aim to provide a variety of unique, helpful, and <span>fun</span> products for your pet</h2>
+                    <div className="about-us__text-divider"></div>
+                    <p>toys, costumes, harness... plenty of accessories. come take a look!</p>
+                </div>  
+            </div>  
         </div>    
     );
 }
